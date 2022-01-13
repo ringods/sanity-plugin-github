@@ -1,0 +1,38 @@
+{
+  "name": "@ringods/sanity-plugin-github",
+  "version": "0.0.1",
+  "description": "Sanity.io plugin to include content from Github repositories & gists",
+  "author": "Ringo De Smet",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "sanity.json"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "sanipack build",
+    "watch": "sanipack build --watch",
+    "prepublishOnly": "sanipack build && sanipack verify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringods/sanity-plugin-github.git"
+  },
+  "keywords": [
+    "sanity",
+    "sanity-plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/ringods/sanity-plugin-github/issues"
+  },
+  "homepage": "https://github.com/ringods/sanity-plugin-github#readme",
+  "devDependencies": {
+    "@sanity/base": "^2.24.0",
+    "sanipack": "^2.1.0"
+  },
+  "peerDependencies": {
+    "@sanity/base": "^2.24.0"
+  }
+}
