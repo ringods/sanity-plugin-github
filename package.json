@@ -30,9 +30,11 @@
   "homepage": "https://github.com/ringods/sanity-plugin-github#readme",
   "devDependencies": {
     "@sanity/base": "^2.24.0",
+    "@sanity/form-builder": "^2.24.0",
     "sanipack": "^2.1.0"
   },
   "peerDependencies": {
-    "@sanity/base": "^2.24.0"
+    "@sanity/base": "^2.24.0",
+    "@sanity/form-builder": "^2.24.0"
   }
 }

@@ -1,8 +1,12 @@
 {
-    "paths": {
-      "source": "src",
-      "compiled": "dist"
-    },
-    "parts": [
-    ]
-  }
+  "paths": {
+    "source": "src",
+    "compiled": "dist"
+  },
+  "parts": [
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "schema/gist"
+    }
+  ]
+}
