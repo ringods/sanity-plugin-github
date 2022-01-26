@@ -10,6 +10,7 @@ export type Gist = {
 
 export default {
     name: 'github.gist',
+    title: 'Gist',
     description: 'Gist',
     type: 'object',
     fields: [
