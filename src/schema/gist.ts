@@ -17,10 +17,12 @@ export default {
         {
             type: 'string',
             name: 'id',
+            description: 'ID of the Github Gist'
         },
         {
             type: 'string',
             name: 'file',
+            description: 'File to select of a multi-file Gist'
         },
     ],
     inputComponent: GistInput, // - https://github.com/sanity-io/sanity/blob/next/packages/%40sanity/code-input/src/schema.tsx#L15
