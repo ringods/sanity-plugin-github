@@ -30,6 +30,13 @@ export default {
         select: {
             id: 'id',
             file: 'file'
+        },
+        prepare(selection) {
+            const {id, file} = selection
+            return {
+              title: `Gist ${id}`,
+              subtitle: file ? `File ${file}` : null
+            }
         }
     }
 };
