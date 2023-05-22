@@ -4,17 +4,33 @@
   "description": "Sanity.io plugin to include content from Github repositories & gists",
   "author": "Ringo De Smet",
   "license": "MIT",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "source": "./src/index.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "src",
+    "v2-incompatible.js",
     "sanity.json"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
-    "build": "sanipack build",
-    "watch": "sanipack build --watch",
-    "prepublishOnly": "sanipack build && sanipack verify"
+    "build": "run-s clean && plugin-kit verify-package --silent && pkg-utils build --strict && pkg-utils --strict",
+    "watch": "pkg-utils watch --strict",
+    "link-watch": "plugin-kit link-watch",
+    "prepublishOnly": "run-s build"
   },
   "repository": {
     "type": "git",
@@ -29,12 +45,16 @@
   },
   "homepage": "https://github.com/ringods/sanity-plugin-github#readme",
   "devDependencies": {
-    "@sanity/base": "^2.24.0",
-    "@sanity/form-builder": "^2.24.0",
-    "sanipack": "^2.1.0"
+    "@sanity/pkg-utils": "^2.2.15",
+    "@sanity/plugin-kit": "^3.1.7",
+    "@types/node": "^20.2.1",
+    "sanity": "^3.11.1",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@sanity/base": "^2.24.0",
-    "@sanity/form-builder": "^2.24.0"
+    "sanity": "^3.11.1"
+  },
+  "dependencies": {
+    "@sanity/incompatible-plugin": "^1.0.4"
   }
 }
